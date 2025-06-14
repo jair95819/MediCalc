@@ -1,6 +1,8 @@
 package com.example.medicalc
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -17,6 +19,12 @@ class MainActivity : AppCompatActivity() {
             insets
 
             //El proyecto ya está en github!
+        }
+
+        val btnLogin = findViewById<Button>(R.id.btnLogin)
+        btnLogin.setOnClickListener {
+            val intent = Intent(this, MenuActivity::class.java)
+            startActivity(intent)
         }
     }
 }
